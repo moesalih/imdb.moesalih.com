@@ -1,7 +1,6 @@
 
 
 - find: better interface
-- movies-in-theater: parse title name into components (year, etc...)
 - placeholder image
 - convert duration to 1h35min format
 - better search field

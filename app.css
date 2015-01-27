@@ -81,6 +81,7 @@ img {
 }
 .poster {
   margin: 0 auto;
+  margin-bottom: 0.5em;
 }
 .poster img {
   width: 100%;
@@ -93,12 +94,8 @@ img {
   border-width: 0 !important;
   margin: 1em 0.5em;
 }
-.result .year {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.result .details {
   opacity: 0.3;
-  font-size: 0.8em;
 }
 .navbar-default {
   background-color: transparent;
@@ -112,9 +109,6 @@ img {
 }
 .overview .poster {
   max-width: 80%;
-}
-.overview .year {
-  font-weight: bold;
 }
 .overview h4 {
   display: block;
@@ -130,13 +124,19 @@ img {
 	text-align: center;
 }
 */
+.details {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
 .details span {
   margin-right: 1em;
-  opacity: 0.5;
-  font-size: 0.8em;
 }
 .details span.label {
   font-size: 0.7em;
+}
+.details span.year,
+.details span.rating {
+  font-weight: bold;
 }
 .knownfor {
   text-align: center;

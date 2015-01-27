@@ -69,7 +69,10 @@ function displayResults($list) {
 		<a class="result" href="<?php echo $result["link"]; ?>">
 			<div class="poster"><img src="<?php echo $result["image"]; ?>" /></div>
 			<div><?php echo $result["name"]; ?></div>
-			<div class="year"><?php echo isset($result["year"]) ? $result["year"] : ""; ?></div>
+			<div class="details">
+				<?php echo isset($result["year"]) ? '<span class="year">' . $result["year"] . '</span>' : ""; ?>
+				<?php echo isset($result["rating"]) && $result["rating"] ? '<span class="rating"><i class="fa fa-star"></i> ' . $result["rating"] . '</span>'  : ""; ?>
+			</div>
 		</a>
 	<?php }
 }

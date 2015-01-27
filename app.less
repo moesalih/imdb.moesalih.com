@@ -105,6 +105,7 @@ img {
 
 .poster {
 	margin: 0 auto;
+	margin-bottom: 0.5em;
 	
 	img {
 		width: 100%;
@@ -121,11 +122,8 @@ img {
 	border-width: 0 !important;
 	margin: 1em 0.5em;
 
-	.year {
-		.uppercase();
+	.details {
 		opacity: 0.3;
-		font-size: 0.8em;
-		
 	}
 }
 
@@ -155,9 +153,6 @@ img {
 		max-width: 80%;
 	}
 	
-	.year {
-		font-weight: bold;
-	}
 	
 	h4 {
 		display: block;
@@ -176,18 +171,25 @@ img {
 }
 */
 
-.details span {
-	//.uppercase();
-	margin-right: 1em;
-	opacity: 0.5;
+.details {
 	font-size: 0.8em;
+	opacity: 0.5;
+
+	span {
+		//.uppercase();
+		margin-right: 1em;
+		
+		&.label {
+			font-size: 0.7em;
+		}
 	
-	&.label {
-		font-size: 0.7em;
+		&.year, &.rating {
+			font-weight: bold;
+		}
+	
 	}
+
 }
-
-
 
 
 .knownfor {
