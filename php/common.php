@@ -56,11 +56,20 @@ function cleanH4($pq) {
 }
 
 
+function parseResult($item) {
+	if (preg_match("/^([^\(\)]*)\((\d+)\)$/", $item["name"], $nameTokens)) {
+		$item["name"] = $nameTokens[1];
+		$item["year"] = $nameTokens[2];
+	}
+	return $item;
+}
+
 function displayResults($list) {
 	foreach ($list as $result) { ?>
 		<a class="result" href="<?php echo $result["link"]; ?>">
 			<div class="poster"><img src="<?php echo $result["image"]; ?>" /></div>
 			<div><?php echo $result["name"]; ?></div>
+			<div class="year"><?php echo isset($result["year"]) ? $result["year"] : ""; ?></div>
 		</a>
 	<?php }
 }

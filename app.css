@@ -93,6 +93,13 @@ img {
   border-width: 0 !important;
   margin: 1em 0.5em;
 }
+.result .year {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  opacity: 0.3;
+  font-size: 0.8em;
+}
 .navbar-default {
   background-color: transparent;
   border-color: transparent;

@@ -18,5 +18,5 @@
 + title-fullcredits
 + title-awards
 + name-bio
-
++ name-awards
 

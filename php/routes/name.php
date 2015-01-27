@@ -17,12 +17,11 @@ $result["awards_"] = trim($pqAwards->remove()->html());
 $pqKnownFor = pq("div.article #knownfor");
 $knownFor = array();
 foreach($pqKnownFor->children() as $item) {
-	//$knownFor[] = pq($item)->text();
-	$knownFor[] = array(
+	$knownFor[] = parseResult(array(
 		"image" => proxyImages(pq($item)->find("img")->attr("src")),
 		"name" => trim(pq($item)->text()),
 		"link" => pq($item)->find("a")->attr("href"),
-	);
+	));
 }
 $pqKnownFor->parent()->remove();
 $result["knownfor"] = $knownFor;
