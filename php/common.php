@@ -56,12 +56,31 @@ function cleanH4($pq) {
 }
 
 
+function displayResults($list) {
+	foreach ($list as $result) { ?>
+		<a class="result" href="<?php echo $result["link"]; ?>">
+			<div class="poster"><img src="<?php echo $result["image"]; ?>" /></div>
+			<div><?php echo $result["name"]; ?></div>
+		</a>
+	<?php }
+}
 
 
 
 
-$route = $_SERVER["REDIRECT_URL"];
+
+
+
 $path = $_SERVER["REQUEST_URI"];
+
+
+//$route = isset($_SERVER["REDIRECT_URL"]) ? $_SERVER["REDIRECT_URL"] : "";
+$route = $_SERVER["REQUEST_URI"];
+$routeTokens = explode("?", $route);
+$route = $routeTokens[0];
+if ($route == "/") $path = "/movies-in-theaters/";
+
+
 $response = curl("http://www.imdb.com" . $path);
 //$px = new px($response);
 //$html = file_get_contents('http://www.imdb.com/title/tt0816692/');
@@ -71,6 +90,6 @@ $result = array();
 
 
 
-
+include("router.php");
 
 ?>

@@ -84,12 +84,7 @@ $result["main_"] = trim($pqMain->html());
 	<section class="knownfor">
 		<div class="container-fluid">
 			<h2>Known For</h2>
-			<?php foreach ($result["knownfor"] as $title) { ?>
-				<a class="result" href="<?php echo $title["link"]; ?>">
-					<div class="poster"><img src="<?php echo $title["image"]; ?>" /></div>
-					<?php echo $title["name"]; ?>
-				</a>
-			<?php } ?>
+			<?php displayResults($result["knownfor"]); ?>
 		</div>
 	</section>
 <?php } ?>

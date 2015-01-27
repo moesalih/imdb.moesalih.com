@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>IMDB</title>
+		<title><?php echo pq("head title")->text(); ?></title>
 
 		<link rel="shortcut icon" type="image/png" href="/images/icon.png" />
 		<link rel="apple-touch-icon" href="/images/icon.png"/>
@@ -24,8 +24,39 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
-	<body>
-			
+	<body class="<?php echo $routeSlug; ?>">
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">imdb</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+	      <form class="navbar-form navbar-left" role="search" action="/find">
+	        <div class="form-group">
+					<input class="form-control" name="q" type="text" size="20" placeholder="Search" value="<?php echo $route == "/find" ? $_GET["q"] : ""; ?>" autocomplete="off" />
+	        </div>
+	      </form>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!--
 		<div class="container-fluid">
 			<div id="search">
 				<form action="/find">
@@ -33,8 +64,15 @@
 				</form>
 			</div>
 		</div>
+-->
 
-		<?php include("php/router.php"); ?>
+		<main>
+			<?php 
+				if (isset($routeSlug)) {
+					include("php/routes/$routeSlug.php");
+				}
+			?>
+		</main>
 
 <!--
 			<pre><?php 

@@ -35,6 +35,10 @@ $result["description_"] = trim(pq("p[itemprop='description']")->html());
 
 $result["trailer"] = "";
 
+$pqEpisodes = pq("div.article #title-episode-widget")->parent();
+$pqEpisodes->find("hr")->remove();
+$result["episodes_"] = trim($pqEpisodes->html());
+
 $result["awards_"] = trim(pq("div.article#titleAwardsRanks")->html());
 $result["cast_"] = trim(pq("div.article#titleCast")->html());
 
@@ -112,6 +116,7 @@ $result["didyouknow_"] = trim(pq("div.article#titleDidYouKnow")->html());
 </section>
 
 
+<?php if ($result["episodes_"]) echo '<section class="episodes"><div class="container">' . $result["episodes_"] . '</div></section>';	?>
 <?php if ($result["awards_"]) echo '<section class="awards">' . $result["awards_"] . '</section>';	?>
 
 <section class="cast"><?php echo $result["cast_"]; ?></section>

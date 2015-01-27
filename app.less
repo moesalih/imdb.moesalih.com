@@ -19,13 +19,10 @@
 
 body {
 	font-family: "Lato";
-	font-size: 16px;
 	line-height: 1.6;
 	padding-bottom: 3em;
 	background-color: #fdfdfd;
 	
-	@media (min-width: 768px) { font-size: 20px; }
-	@media (min-width: 1000px) { font-size: 22px; }
 	
 }
 
@@ -55,15 +52,24 @@ h4 {
 	line-height: inherit;
 }
 
-a {
-	color: inherit;
-	border-bottom: 1px solid #ccc;
-	transition: border-bottom 300ms;
-}
-a:hover, a:active, a:focus {
-	color: inherit;
-	text-decoration: none;
-	border-bottom: 1px solid #333;
+
+main {
+	font-size: 16px;
+	@media (min-width: 768px) { font-size: 20px; }
+	@media (min-width: 1000px) { font-size: 22px; }
+
+	a {
+		color: inherit;
+		border-bottom: 1px solid #ccc;
+		transition: border-bottom 300ms;
+	}
+	a:hover, a:active, a:focus {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px solid #333;
+	}
+
+	
 }
 
 
@@ -78,11 +84,12 @@ hr {
 		opacity: 1;
 		width: 300px;
 		border-color: #ddd;
+		//margin: 3em auto;
 	}
 }
 
 img {
-	width: 128px;
+	//width: 128px;
 	box-shadow: #ccc 0 0 0px 1px;
 }
 
@@ -106,16 +113,40 @@ img {
 
 
 
+.result {
+	display: inline-block;
+	text-align: left;
+	width: 11em;
+	vertical-align: top;
+	border-width: 0 !important;
+	margin: 1em 0.5em;
 
-#search {
-	margin: 1em auto;
 }
+
+
+
+
+
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+.navbar [name='q'] {
+	width: 300px;
+}
+.navbar-brand {
+	font-weight: 900;
+}
+
+
+
 
 .overview {
 	//text-align: center;
 	
 	.poster {
-		max-width: 14em;
+		max-width: 80%;
 	}
 	
 	.year {
@@ -151,27 +182,190 @@ img {
 }
 
 
-.result {
-	display: inline-block;
-	text-align: left;
-	width: 10em;
-	vertical-align: top;
-	border-width: 0;
-	margin: 0.2em;
-
-}
-
-
-
-
-
-
-
 
 
 .knownfor {
 	text-align: center;	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.index {
+
+	.navbar input[name="q"] {
+		display: none;
+	}
+	.main-search input {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	
+}
+
+
+body.find {
+	#findSubHeader {
+		margin-bottom: 2em;
+		opacity: 0.5;
+		font-size: 0.7em;
+	}
+	
+	#findSubHeaderLabel {
+		.uppercase();
+		opacity: 0.5;
+		font-size: 0.8em;
+		margin-right: 0.5em;
+	}
+	
+	.findList {
+	
+		img {
+			width: 128px;
+		}
+		td {
+			padding: 0.5em 1em 0.5em 0;
+		}
+	}
+}
+
+body.title {
+
+	.episodes {
+		.episode-widget-airdate {
+			font-size: 0.8em;
+		}
+		.ratings-user-rating {
+			display: none;
+		}
+		.seasons-and-year-nav div {
+			display: inline-block;
+			width: 49%;
+			vertical-align: top;
+		}
+	}
+
+	.cast {
+	
+		.cast_list {
+			margin: 0 auto;
+			
+			
+			.castlist_label, .primary_photo {
+				display: none;
+			}
+		
+			td {
+				padding: 0.5em 1em;
+			}
+			td[itemprop=actor] {
+				width: 50%;
+				text-align: right;
+				font-weight: 700;
+			}
+			td.character {
+				width: 50%;
+			}
+						
+		}
+		
+		.see-more {
+			margin-top: 2em;
+			text-align: center;
+		}
+	}
+
+}
+
+
+body.title-episodes {
+	
+	div.episode-list-select div {
+		float: left;
+	}
+	.season-year-separator {
+		float: left;
+		//padding: 20px 5px;
+	}
+	
+	button.sort_direction {
+		display: none;
+	}
+	
+}
+
+
+
+body.name {
+	
+	#filmography {
+	
+		margin-top: 1em;
+		
+		.head {
+			padding-top: 1em;
+			padding-bottom: 1em;
+	
+			color: #ccc;
+			font-size: 0.8em;
+			
+			a {
+				color: #333;
+				font-size: 1.5em;
+				border: none;	
+			}
+			
+			.show-link, .hide-link {
+				display: none;
+				float: right;
+				cursor: pointer;
+				
+				img {
+					display: none;
+				}
+			}
+			.hide-link {
+				display: inline;
+			}
+		}
+		
+		
+		.filmo-row {
+			margin: 0.8em auto;
+			font-size: 0.8em;
+			
+			b {
+				font-size: 1.25em;
+			}
+		}
+		.year_column {
+			float: right;
+			text-align: right;
+			//font-size: 0.8em;
+			padding: 0.2em 0;
+		}
+	
+	}
+	
+	
+}
+
+
+
+
 
 
 
@@ -206,31 +400,13 @@ img {
 .ellipsis {
 	display: none;
 }
-
-
-
-#findSubHeader {
-	margin-bottom: 2em;
-	opacity: 0.5;
-	font-size: 0.7em;
+.clear {
+	clear: both;
 }
 
-#findSubHeaderLabel {
-	.uppercase();
-	opacity: 0.5;
-	font-size: 0.8em;
-	margin-right: 0.5em;
-}
 
-.findList {
 
-	img {
-		width: 128px;
-	}
-	td {
-		padding: 0.5em 1em 0.5em 0;
-	}
-}
+
 
 
 .awards {
@@ -244,88 +420,11 @@ img {
 		margin-top: 1em;
 	}
 }
-.cast {
-
-	.cast_list {
-		margin: 0 auto;
-		
-		
-		.castlist_label, .primary_photo {
-			display: none;
-		}
-	
-/*
-		tr:hover {
-			background-color: #f9f9f9;
-		}
-*/
-		td {
-			padding: 0.5em 1em;
-		}
-		td[itemprop=actor] {
-			width: 50%;
-			text-align: right;
-			font-weight: 700;
-		}
-		td.character {
-			width: 50%;
-		}
-		
-		
-	}
-	
-	.see-more {
-		margin-top: 2em;
-		text-align: center;
-	}
-}
 
 
 #jumpto {
 	opacity: 0.5;
 	font-size: 0.7em;
-}
-
-#filmography {
-
-	margin-top: 1em;
-	
-	.head {
-		padding-top: 1em;
-		padding-bottom: 1em;
-
-		color: #ccc;
-		font-size: 0.8em;
-		
-		a {
-			color: #333;
-			font-size: 1.5em;
-			border: none;	
-		}
-		
-		.show-link, .hide-link {
-			display: none;
-			float: right;
-			cursor: pointer;
-			
-			img {
-				display: none;
-			}
-		}
-		.hide-link {
-			display: inline;
-		}
-	}
-	
-	
-	.filmo-row {
-		margin: 0.6em auto;
-	}
-	.year_column {
-		float: right;
-		text-align: right;
-	}
-
 }
 
 

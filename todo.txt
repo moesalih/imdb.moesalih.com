@@ -1,6 +1,22 @@
 
-+ home
+
+- find: better interface
+- movies-in-theater: parse title name into components (year, etc...)
+- placeholder image
+- convert duration to 1h35min format
+- better search field
+
+
++ logo
++ title: trailer
++ title: episodes
+
+- responsive
+
+
++ title-episodes
 + title-fullcredits
 + title-awards
++ name-bio
 
 

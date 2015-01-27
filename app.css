@@ -5,20 +5,9 @@
 }
 body {
   font-family: "Lato";
-  font-size: 16px;
   line-height: 1.6;
   padding-bottom: 3em;
   background-color: #fdfdfd;
-}
-@media (min-width: 768px) {
-  body {
-    font-size: 20px;
-  }
-}
-@media (min-width: 1000px) {
-  body {
-    font-size: 22px;
-  }
 }
 h1 {
   margin-top: 0;
@@ -44,15 +33,28 @@ h4 {
   margin: 0;
   line-height: inherit;
 }
-a {
+main {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  main {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  main {
+    font-size: 22px;
+  }
+}
+main a {
   color: inherit;
   border-bottom: 1px solid #ccc;
   -webkit-transition: border-bottom 300ms;
           transition: border-bottom 300ms;
 }
-a:hover,
-a:active,
-a:focus {
+main a:hover,
+main a:active,
+main a:focus {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid #333;
@@ -69,7 +71,6 @@ hr.seperator {
   border-color: #ddd;
 }
 img {
-  width: 128px;
   box-shadow: #ccc 0 0 0px 1px;
 }
 .container {
@@ -84,11 +85,26 @@ img {
 .poster img {
   width: 100%;
 }
-#search {
-  margin: 1em auto;
+.result {
+  display: inline-block;
+  text-align: left;
+  width: 11em;
+  vertical-align: top;
+  border-width: 0 !important;
+  margin: 1em 0.5em;
+}
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar [name='q'] {
+  width: 300px;
+}
+.navbar-brand {
+  font-weight: 900;
 }
 .overview .poster {
-  max-width: 14em;
+  max-width: 80%;
 }
 .overview .year {
   font-weight: bold;
@@ -115,16 +131,115 @@ img {
 .details span.label {
   font-size: 0.7em;
 }
-.result {
-  display: inline-block;
-  text-align: left;
-  width: 10em;
-  vertical-align: top;
-  border-width: 0;
-  margin: 0.2em;
-}
 .knownfor {
   text-align: center;
+}
+body.index .navbar input[name="q"] {
+  display: none;
+}
+body.index .main-search input {
+  max-width: 500px;
+  margin: 0 auto;
+}
+body.find #findSubHeader {
+  margin-bottom: 2em;
+  opacity: 0.5;
+  font-size: 0.7em;
+}
+body.find #findSubHeaderLabel {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  opacity: 0.5;
+  font-size: 0.8em;
+  margin-right: 0.5em;
+}
+body.find .findList img {
+  width: 128px;
+}
+body.find .findList td {
+  padding: 0.5em 1em 0.5em 0;
+}
+body.title .episodes .episode-widget-airdate {
+  font-size: 0.8em;
+}
+body.title .episodes .ratings-user-rating {
+  display: none;
+}
+body.title .episodes .seasons-and-year-nav div {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+body.title .cast .cast_list {
+  margin: 0 auto;
+}
+body.title .cast .cast_list .castlist_label,
+body.title .cast .cast_list .primary_photo {
+  display: none;
+}
+body.title .cast .cast_list td {
+  padding: 0.5em 1em;
+}
+body.title .cast .cast_list td[itemprop=actor] {
+  width: 50%;
+  text-align: right;
+  font-weight: 700;
+}
+body.title .cast .cast_list td.character {
+  width: 50%;
+}
+body.title .cast .see-more {
+  margin-top: 2em;
+  text-align: center;
+}
+body.title-episodes div.episode-list-select div {
+  float: left;
+}
+body.title-episodes .season-year-separator {
+  float: left;
+}
+body.title-episodes button.sort_direction {
+  display: none;
+}
+body.name #filmography {
+  margin-top: 1em;
+}
+body.name #filmography .head {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #ccc;
+  font-size: 0.8em;
+}
+body.name #filmography .head a {
+  color: #333;
+  font-size: 1.5em;
+  border: none;
+}
+body.name #filmography .head .show-link,
+body.name #filmography .head .hide-link {
+  display: none;
+  float: right;
+  cursor: pointer;
+}
+body.name #filmography .head .show-link img,
+body.name #filmography .head .hide-link img {
+  display: none;
+}
+body.name #filmography .head .hide-link {
+  display: inline;
+}
+body.name #filmography .filmo-row {
+  margin: 0.8em auto;
+  font-size: 0.8em;
+}
+body.name #filmography .filmo-row b {
+  font-size: 1.25em;
+}
+body.name #filmography .year_column {
+  float: right;
+  text-align: right;
+  padding: 0.2em 0;
 }
 /********** IMDB overrides **********/
 .inline {
@@ -149,24 +264,8 @@ img {
 .ellipsis {
   display: none;
 }
-#findSubHeader {
-  margin-bottom: 2em;
-  opacity: 0.5;
-  font-size: 0.7em;
-}
-#findSubHeaderLabel {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  opacity: 0.5;
-  font-size: 0.8em;
-  margin-right: 0.5em;
-}
-.findList img {
-  width: 128px;
-}
-.findList td {
-  padding: 0.5em 1em 0.5em 0;
+.clear {
+  clear: both;
 }
 .awards {
   background-color: #f6f6f6;
@@ -178,68 +277,7 @@ img {
   display: block;
   margin-top: 1em;
 }
-.cast .cast_list {
-  margin: 0 auto;
-  /*
-		tr:hover {
-			background-color: #f9f9f9;
-		}
-*/
-}
-.cast .cast_list .castlist_label,
-.cast .cast_list .primary_photo {
-  display: none;
-}
-.cast .cast_list td {
-  padding: 0.5em 1em;
-}
-.cast .cast_list td[itemprop=actor] {
-  width: 50%;
-  text-align: right;
-  font-weight: 700;
-}
-.cast .cast_list td.character {
-  width: 50%;
-}
-.cast .see-more {
-  margin-top: 2em;
-  text-align: center;
-}
 #jumpto {
   opacity: 0.5;
   font-size: 0.7em;
-}
-#filmography {
-  margin-top: 1em;
-}
-#filmography .head {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  color: #ccc;
-  font-size: 0.8em;
-}
-#filmography .head a {
-  color: #333;
-  font-size: 1.5em;
-  border: none;
-}
-#filmography .head .show-link,
-#filmography .head .hide-link {
-  display: none;
-  float: right;
-  cursor: pointer;
-}
-#filmography .head .show-link img,
-#filmography .head .hide-link img {
-  display: none;
-}
-#filmography .head .hide-link {
-  display: inline;
-}
-#filmography .filmo-row {
-  margin: 0.6em auto;
-}
-#filmography .year_column {
-  float: right;
-  text-align: right;
 }
