@@ -73,7 +73,7 @@ $result["didyouknow_"] = trim(pq("div.article#titleDidYouKnow")->html());
 					<span><?php echo implode(" / ", $result["genres"]); ?></span>
 				</div>
 				<div class="details">
-					<span class="rating"><i class="fa fa-star"></i> <?php echo $result["ratingValue"]; ?></span>
+					<?php if ($result["ratingValue"]) { ?><span class="rating"><i class="fa fa-star"></i> <?php echo $result["ratingValue"]; ?></span><?php } ?>
 <!-- 					<?php if ($result["metascore"]) { ?><span class="rating">Metascore: <?php echo $result["metascore"]; ?>%</span><?php } ?> -->
 					<span><?php echo $result["duration"]; ?></span>
 					<span class="label label-default"><?php echo $result["contentRating"]; ?></span>
