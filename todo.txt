@@ -1,9 +1,11 @@
 
 
-- find: better interface
-- placeholder image
+- find: improve
+- title-episodes: improve
+
 - convert duration to 1h35min format
 - better search field
+- title: show tv show name
 
 
 + logo
@@ -13,7 +15,8 @@
 - responsive
 
 
-+ title-episodes
+
++ movie-coming-soon
 + title-fullcredits
 + title-awards
 + name-bio

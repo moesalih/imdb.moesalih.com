@@ -2,6 +2,7 @@
 
 $result["image"] = pq("#img_primary img[itemprop='image']")->attr("src");
 $result["image"] = proxyImages($result["image"]);
+if (!$result["image"]) $result["image"] = PLACEHOLDER_IMAGE;
 
 
 $result["name"] = pq("h1 span[itemprop='name']")->text();

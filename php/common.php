@@ -1,11 +1,13 @@
 <?php
 
-//include("px.017.php");
 require('phpQuery/phpQuery.php');
 
 
 
 ini_set('display_errors', 1);
+
+define('PLACEHOLDER_IMAGE', "http://zapp.trakt.us/images/poster-dark.jpg");
+
 
 
 function curl($url) {
@@ -42,6 +44,7 @@ function pqArrayToPhpArray($pq) {
 
 function proxyImages($input) {
 	$input = preg_replace("/V1_S.*_AL_/", "V1_SX512_AL_", $input);
+	$input = str_replace("http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/32x44/film-3119741174._CB379391527_.png", PLACEHOLDER_IMAGE, $input);
 
 	$proxy = "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=$1&container=focus&refresh=5184000";
 	return preg_replace("/(http:\/\/ia.media-imdb.com\/images\/.*\.(jpg|png))/", $proxy, $input);
