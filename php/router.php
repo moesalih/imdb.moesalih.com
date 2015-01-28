@@ -7,6 +7,9 @@ if ($route == "/") {
 else if (preg_match("/^\/movies-in-theaters\/$/", $route)) {
 	$routeSlug = "movies-in-theaters";
 }
+else if (preg_match("/^\/movies-coming-soon\/$/", $route)) {
+	$routeSlug = "movies-coming-soon";
+}
 else if (preg_match("/^\/find$/", $route)) {
 	$routeSlug = "find";
 }
