@@ -5,12 +5,13 @@
 
 - convert duration to 1h35min format
 - better search field
-- title: show tv show name
 
 
-+ logo
 + title: trailer
 + title: episodes
+
++ social buttons
++ logo
 
 - responsive
 
@@ -21,4 +22,5 @@
 + title-awards
 + name-bio
 + name-awards
+
 

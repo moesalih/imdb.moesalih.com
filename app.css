@@ -110,6 +110,9 @@ img {
 .overview .poster {
   max-width: 80%;
 }
+.overview .tvHeader a {
+  font-weight: bold;
+}
 .overview h4 {
   display: block;
   margin-top: 2em;
@@ -131,9 +134,6 @@ img {
 .details span {
   margin-right: 1em;
 }
-.details span.label {
-  font-size: 0.7em;
-}
 .details span.year,
 .details span.rating {
   font-weight: bold;
@@ -153,6 +153,9 @@ body.find #findSubHeader {
   opacity: 0.5;
   font-size: 0.7em;
 }
+body.find #findSubHeader a {
+  font-weight: bold;
+}
 body.find #findSubHeaderLabel {
   font-weight: 700;
   text-transform: uppercase;
@@ -166,6 +169,14 @@ body.find .findList img {
 }
 body.find .findList td {
   padding: 0.5em 1em 0.5em 0;
+}
+body.find .findMoreMatches {
+  font-size: 0.7em;
+  opacity: 0.5;
+  margin-top: 1em;
+}
+body.find .findMoreMatches a {
+  font-weight: bold;
 }
 body.title .episodes .episode-widget-airdate {
   font-size: 0.8em;

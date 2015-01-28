@@ -5,6 +5,7 @@ $result["image"] = proxyImages($result["image"]);
 if (!$result["image"]) $result["image"] = PLACEHOLDER_IMAGE;
 
 
+$result["tvHeader"] = pq("h2.tv_header")->html();
 $result["name"] = pq("h1 span[itemprop='name']")->text();
 $result["year"] = pq("h1 span.nobr")->text();
 $result["year"] = trim($result["year"], "()");
@@ -67,6 +68,7 @@ $result["didyouknow_"] = trim(pq("div.article#titleDidYouKnow")->html());
 		-->
 			</div>
 			<div class="col-sm-8">
+				<?php if ($result["tvHeader"]) { ?><span class="tvHeader"><?php echo $result["tvHeader"]; ?></span><?php } ?>
 				<h1 class=""><?php echo $result["name"]; ?></h1>
 				
 				<div class="details">
