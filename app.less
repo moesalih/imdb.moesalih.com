@@ -320,18 +320,47 @@ body.title {
 
 body.title-episodes {
 	
+	.episodeCurrentState {
+		display: none;
+	}
+	
 	div.episode-list-select div {
-		float: left;
+		display: inline-block;
+	}
+	.seasonAndYearNav {
+		text-align: center;
+		margin-top: 2em;
 	}
 	.season-year-separator {
-		float: left;
-		//padding: 20px 5px;
+		display: inline-block;
+		//float: left;
+		padding: 0 2em;
+		opacity: 0.3;
+		font-size: 0.8em;
+		.uppercase();
 	}
 	
 	button.sort_direction {
 		display: none;
 	}
 	
+	
+	.image {
+		float: left;
+		margin-right: 1em;
+		margin-top: 0.2em;
+		margin-bottom: 0.5em;
+	}
+	
+	.airdate {
+		float: right;
+		font-size: 0.7em;
+		opacity: 0.3;
+		margin-top: 0.4em;
+	}
+	.item_description {
+		font-size: 0.8em;
+	}
 }
 
 

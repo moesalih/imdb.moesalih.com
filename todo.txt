@@ -1,14 +1,14 @@
 
 
+- title: episodes improve
+
 - find: improve
-- title-episodes: improve
 
 - convert duration to 1h35min format
 - better search field
 
 
 + title: trailer
-+ title: episodes
 
 + social buttons
 + logo
