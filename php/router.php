@@ -19,6 +19,9 @@ else if (preg_match("/^\/title\/tt\d+\/$/", $route)) {
 else if (preg_match("/^\/title\/tt\d+\/episodes$/", $route)) {
 	$routeSlug = "title-episodes";
 }
+else if (preg_match("/^\/title\/tt\d+\/awards$/", $route)) {
+	$routeSlug = "title-awards";
+}
 else if (preg_match("/^\/name\/nm\d+\/$/", $route)) {
 	$routeSlug = "name";
 }

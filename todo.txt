@@ -12,13 +12,13 @@
 
 + social buttons
 + logo
++ bookmarklet
 
 - responsive
 
 
 
 + title-fullcredits
-+ title-awards
 + name-bio
 + name-awards
 

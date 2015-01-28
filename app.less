@@ -204,7 +204,24 @@ img {
 
 
 
-
+.subpage_title_block {
+	margin-bottom: 3em;
+	
+	h3 {
+		margin: 0;
+		font-size: inherit;
+		
+		span.nobr {
+			font-size: 0.8em;
+			opacity: 0.5;
+		}
+	}
+	.poster {
+		display: none;
+		float: left;
+		margin-right: 1em;
+	}
+}
 
 
 
@@ -363,6 +380,38 @@ body.title-episodes {
 	}
 }
 
+body.title-awards {
+	
+	div.header {
+		font-size: 0.8em;
+		opacity: 0.5;	
+	}
+	
+	table.awards {
+		width: 100%;
+		//border: 1px solid #ddd;
+		
+		td {
+			border: 1px solid #ddd;
+			padding: 0.5em 0.8em;
+			vertical-align: top;
+		}
+		
+		.title_award_outcome {
+			width: 30%;
+		}
+		
+		.production_role {
+			font-size: 0.8em;
+			opacity: 0.5;
+		}
+		
+		.award_detail_notes {
+			display: none;
+		}
+	}
+	
+}
 
 
 body.name {
@@ -465,7 +514,7 @@ body.name {
 
 
 
-.awards {
+section.awards {
 	background-color: #f6f6f6;
 	text-align: center;
 	border-top: 1px solid #eee;

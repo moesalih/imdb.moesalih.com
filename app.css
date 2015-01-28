@@ -141,6 +141,22 @@ img {
 .knownfor {
   text-align: center;
 }
+.subpage_title_block {
+  margin-bottom: 3em;
+}
+.subpage_title_block h3 {
+  margin: 0;
+  font-size: inherit;
+}
+.subpage_title_block h3 span.nobr {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+.subpage_title_block .poster {
+  display: none;
+  float: left;
+  margin-right: 1em;
+}
 body.index .navbar input[name="q"] {
   display: none;
 }
@@ -248,6 +264,28 @@ body.title-episodes .airdate {
 body.title-episodes .item_description {
   font-size: 0.8em;
 }
+body.title-awards div.header {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+body.title-awards table.awards {
+  width: 100%;
+}
+body.title-awards table.awards td {
+  border: 1px solid #ddd;
+  padding: 0.5em 0.8em;
+  vertical-align: top;
+}
+body.title-awards table.awards .title_award_outcome {
+  width: 30%;
+}
+body.title-awards table.awards .production_role {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+body.title-awards table.awards .award_detail_notes {
+  display: none;
+}
 body.name #filmography {
   margin-top: 1em;
 }
@@ -313,13 +351,13 @@ body.name #filmography .year_column {
 .clear {
   clear: both;
 }
-.awards {
+section.awards {
   background-color: #f6f6f6;
   text-align: center;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-.awards .see-more {
+section.awards .see-more {
   display: block;
   margin-top: 1em;
 }
