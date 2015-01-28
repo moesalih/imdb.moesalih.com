@@ -1,12 +1,14 @@
 <?php
 
 
+/*
 $result["name"] = trim(pq("div.article.list .subpage_title_block h3 a")->text());
 $result["link"] = trim(pq("div.article.list .subpage_title_block h3 a")->attr("href"));
 $result["details"] = trim(pq("div.article.list .subpage_title_block h3 span.nobr")->text(), " \n\t()");
+*/
 
 
-$pqData = pq("div.article.list #episodes_content");
+$pqData = pq("div.article.list");
 
 phpQuery::each($pqData->find(".list_item"), function($i, $dom) {
 	$episodeNumber = pq($dom)->find(".hover-over-image div")->remove()->text();
@@ -17,14 +19,10 @@ phpQuery::each($pqData->find(".list_item"), function($i, $dom) {
 	}
 });
 
-
-
-
-
-$result["episodes_"] = trim($pqData->html());
-
+$result["data_"] = trim($pqData->html());
 
 ?>
+
 
 
 <script>
@@ -43,12 +41,7 @@ $result["episodes_"] = trim($pqData->html());
 
 <div class="container">
 
-	<h1 class=""><a href="<?php echo $result["link"]; ?>"><?php echo $result["name"]; ?></a></h1>
-	<div class="details">
-		<span class="year" ><?php echo $result["details"]; ?></span>
-	</div>
-
-	<section class=""><?php echo $result["episodes_"]; ?></section>
+	<?php echo $result["data_"]; ?>
 
 </div>
 

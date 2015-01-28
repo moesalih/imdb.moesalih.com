@@ -264,26 +264,33 @@ body.title-episodes .airdate {
 body.title-episodes .item_description {
   font-size: 0.8em;
 }
-body.title-awards div.header {
+body.-awards div.header {
   font-size: 0.8em;
   opacity: 0.5;
 }
-body.title-awards table.awards {
+body.-awards table.awards {
   width: 100%;
+  font-size: 0.8em;
 }
-body.title-awards table.awards td {
+body.-awards table.awards td {
   border: 1px solid #ddd;
   padding: 0.5em 0.8em;
   vertical-align: top;
 }
-body.title-awards table.awards .title_award_outcome {
+body.-awards table.awards .title_award_outcome {
   width: 30%;
 }
-body.title-awards table.awards .production_role {
+body.-awards table.awards .award_year {
+  width: 10%;
+}
+body.-awards table.awards .award_outcome {
+  width: 20%;
+}
+body.-awards table.awards .production_role {
   font-size: 0.8em;
   opacity: 0.5;
 }
-body.title-awards table.awards .award_detail_notes {
+body.-awards table.awards .award_detail_notes {
   display: none;
 }
 body.name #filmography {

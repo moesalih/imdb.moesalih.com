@@ -20,6 +20,5 @@
 
 + title-fullcredits
 + name-bio
-+ name-awards
 
 

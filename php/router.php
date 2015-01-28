@@ -20,10 +20,13 @@ else if (preg_match("/^\/title\/tt\d+\/episodes$/", $route)) {
 	$routeSlug = "title-episodes";
 }
 else if (preg_match("/^\/title\/tt\d+\/awards$/", $route)) {
-	$routeSlug = "title-awards";
+	$routeSlug = "-awards";
 }
 else if (preg_match("/^\/name\/nm\d+\/$/", $route)) {
 	$routeSlug = "name";
+}
+else if (preg_match("/^\/name\/nm\d+\/awards$/", $route)) {
+	$routeSlug = "-awards";
 }
 else {
 	$routeSlug = "default";
