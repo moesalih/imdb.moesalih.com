@@ -1,5 +1,7 @@
 
 @bg: #fdfdfd;
+@imdb: #f5de50;
+
 
 
 .uppercase {
@@ -54,6 +56,9 @@ h4 {
 	line-height: inherit;
 }
 
+input {
+	-webkit-appearance: none;
+}
 
 main {
 	font-size: 16px;
@@ -123,7 +128,8 @@ img {
 }
 
 .label {
-	padding: 0em 0.3em 0.1em;
+	padding: 0.1em 0.4em 0.15em;
+	vertical-align: 2px;
 }
 
 
@@ -135,22 +141,6 @@ img {
 		width: 100%;
 	}
 }
-
-
-
-.result {
-	display: inline-block;
-	text-align: left;
-	width: 11em;
-	vertical-align: top;
-	border-width: 0 !important;
-	margin: 1em 0.5em;
-
-	.details {
-		opacity: 0.3;
-	}
-}
-
 
 
 
@@ -202,7 +192,7 @@ img {
 
 .details {
 	font-size: 0.8em;
-	opacity: 0.5;
+	opacity: 0.4;
 
 	span {
 		//.uppercase();
@@ -210,12 +200,16 @@ img {
 		
 		&.label {
 			//font-size: 0.7em;
+			background: #333;
 		}
 	
 		&.year, &.rating {
 			font-weight: bold;
 		}
 	
+		&.rating.label {
+			//background: @imdb;
+		}
 	}
 
 }
@@ -224,6 +218,24 @@ img {
 .knownfor {
 	text-align: center;	
 }
+
+
+
+
+.result {
+	display: inline-block;
+	text-align: left;
+	width: 11em;
+	vertical-align: top;
+	border-width: 0 !important;
+	margin: 1em 0.5em;
+
+	.details {
+		opacity: 0.3;
+	}
+}
+
+
 
 
 
@@ -263,10 +275,15 @@ body.index {
 	.navbar input[name="q"] {
 		display: none;
 	}
-	.main-search input {
-		max-width: 500px;
-		margin: 0 auto;
+	.main-search {
+		margin-top: 5em;
+		
+		input {
+			max-width: 500px;
+			margin: 0 auto;
+		}
 	}
+	
 	
 }
 

@@ -21,7 +21,7 @@ $result["movies"] = $movies;
 
 <div class="container-fluid">
 
-	<h2><?php echo "Coming Soon"; ?></h2>
+	<h2 class="seperator"><span><?php echo "Coming Soon"; ?></span></h2>
 	<?php displayResults($result["movies"]); ?>
 
 </div>

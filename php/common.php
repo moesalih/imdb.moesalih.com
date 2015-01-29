@@ -74,7 +74,7 @@ function displayResults($list) {
 			<div><?php echo $result["name"]; ?></div>
 			<div class="details">
 				<?php echo isset($result["year"]) ? '<span class="year">' . $result["year"] . '</span>' : ""; ?>
-				<?php echo isset($result["rating"]) && $result["rating"] ? '<span class="rating"><i class="fa fa-star"></i> ' . $result["rating"] . '</span>'  : ""; ?>
+				<?php echo isset($result["rating"]) && $result["rating"] ? '<span class="rating label"><i class="fa fa-star"></i> ' . $result["rating"] . '</span>'  : ""; ?>
 			</div>
 		</a>
 	<?php }
@@ -93,7 +93,7 @@ $path = $_SERVER["REQUEST_URI"];
 $route = $_SERVER["REQUEST_URI"];
 $routeTokens = explode("?", $route);
 $route = $routeTokens[0];
-if ($route == "/") $path = "/movies-in-theaters/";
+//if ($route == "/") $path = "/movies-in-theaters/";
 
 
 $response = curl("http://www.imdb.com" . $path);

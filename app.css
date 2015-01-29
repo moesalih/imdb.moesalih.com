@@ -33,6 +33,9 @@ h4 {
   margin: 0;
   line-height: inherit;
 }
+input {
+  -webkit-appearance: none;
+}
 main {
   font-size: 16px;
 }
@@ -98,7 +101,8 @@ img {
   max-width: 750px;
 }
 .label {
-  padding: 0em 0.3em 0.1em;
+  padding: 0.1em 0.4em 0.15em;
+  vertical-align: 2px;
 }
 .poster {
   margin: 0 auto;
@@ -106,17 +110,6 @@ img {
 }
 .poster img {
   width: 100%;
-}
-.result {
-  display: inline-block;
-  text-align: left;
-  width: 11em;
-  vertical-align: top;
-  border-width: 0 !important;
-  margin: 1em 0.5em;
-}
-.result .details {
-  opacity: 0.3;
 }
 .navbar-default {
   background-color: transparent;
@@ -150,10 +143,13 @@ img {
 */
 .details {
   font-size: 0.8em;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .details span {
   margin-right: 1em;
+}
+.details span.label {
+  background: #333;
 }
 .details span.year,
 .details span.rating {
@@ -161,6 +157,17 @@ img {
 }
 .knownfor {
   text-align: center;
+}
+.result {
+  display: inline-block;
+  text-align: left;
+  width: 11em;
+  vertical-align: top;
+  border-width: 0 !important;
+  margin: 1em 0.5em;
+}
+.result .details {
+  opacity: 0.3;
 }
 .subpage_title_block {
   margin-bottom: 3em;
@@ -180,6 +187,9 @@ img {
 }
 body.index .navbar input[name="q"] {
   display: none;
+}
+body.index .main-search {
+  margin-top: 5em;
 }
 body.index .main-search input {
   max-width: 500px;

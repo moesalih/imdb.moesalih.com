@@ -7,8 +7,15 @@
 
 <br />
 
+<div class="text-center">
+	<a href="/movies-in-theaters/">In Theaters</a> / 
+	<a href="/movies-coming-soon/">Coming Soon</a>
+</div>
+
+<!--
 <?php
 
 include("movies-in-theaters.php");
 
 ?>
+-->
