@@ -60,7 +60,7 @@ function cleanH4($pq) {
 
 
 function parseResult($item) {
-	if (preg_match("/^([^\(\)]*)\((\d+)\)$/", $item["name"], $nameTokens)) {
+	if (preg_match("/^([^\(\)]*) \((\d+)\)$/", $item["name"], $nameTokens)) {
 		$item["name"] = $nameTokens[1];
 		$item["year"] = $nameTokens[2];
 	}

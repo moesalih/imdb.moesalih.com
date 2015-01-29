@@ -17,7 +17,7 @@ foreach($pqLists as $list) {
 	}
 
 	$lists[] = array(
-		"name" => pq($list)->find("h3")->text(),
+		"name" => trim(pq($list)->find("h3")->text(), " \t\n\r\0\x0B\xC2\xA0"),
 		"movies" => $movies,
 	);
 
@@ -32,10 +32,9 @@ $result["lists"] = array_reverse($lists);
 
 	<?php foreach ($result["lists"] as $list) { ?>
 		<section class="text-center">
-			<h2><?php echo $list["name"]; ?></h2>
+			<h2 class="seperator"><span><?php echo $list["name"]; ?></span></h2>
 			<?php displayResults($list["movies"]); ?>
 		</section>
-		<hr class="seperator" />
 	<?php } ?>
 
 </div>

@@ -19,7 +19,7 @@ phpQuery::each($pqData->find(".list_item"), function($i, $dom) {
 	}
 });
 
-$result["data_"] = trim($pqData->html());
+$result["data_"] = trim(proxyImages($pqData->html()));
 
 ?>
 

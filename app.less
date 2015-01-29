@@ -1,4 +1,6 @@
 
+@bg: #fdfdfd;
+
 
 .uppercase {
 	font-weight: 700;
@@ -74,7 +76,7 @@ main {
 
 
 section {
-	padding: 3em 0;
+	padding: 2em 0;
 }
 
 hr {
@@ -87,6 +89,28 @@ hr {
 		//margin: 3em auto;
 	}
 }
+
+h2.seperator, h3.seperator {
+	position: relative;
+	margin-bottom: 1em;
+	
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		border-bottom: 1px solid #e3e3e3;
+		top: 50%;
+		width: 100%;
+		left: 0;
+	}
+	
+	span {
+		position: relative;
+		background: @bg;
+		padding: 0 0.5em;
+	}
+}
+
 
 img {
 	//width: 128px;

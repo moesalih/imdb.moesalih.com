@@ -60,7 +60,7 @@ main a:focus {
   border-bottom: 1px solid #333;
 }
 section {
-  padding: 3em 0;
+  padding: 2em 0;
 }
 hr {
   opacity: 0;
@@ -69,6 +69,27 @@ hr.seperator {
   opacity: 1;
   width: 300px;
   border-color: #ddd;
+}
+h2.seperator,
+h3.seperator {
+  position: relative;
+  margin-bottom: 1em;
+}
+h2.seperator:before,
+h3.seperator:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-bottom: 1px solid #e3e3e3;
+  top: 50%;
+  width: 100%;
+  left: 0;
+}
+h2.seperator span,
+h3.seperator span {
+  position: relative;
+  background: #fdfdfd;
+  padding: 0 0.5em;
 }
 img {
   box-shadow: #ccc 0 0 0px 1px;

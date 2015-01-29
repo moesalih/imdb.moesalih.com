@@ -2,9 +2,11 @@
 
 - find: improve
 - movies-coming-soon: add header, month drop down, etc..
+- movies-in-theaters & movies-coming-soon links
 
 - convert duration to 1h35min format
 - better search field
+- clean links to remove ?ref_
 
 
 + title: trailer
