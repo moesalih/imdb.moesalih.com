@@ -39,7 +39,12 @@ $result["trailer"] = "";
 
 $pqEpisodes = pq("div.article #title-episode-widget")->parent();
 $pqEpisodes->find("hr")->remove();
-$result["episodes_"] = trim($pqEpisodes->html());
+
+$result["episodes_"] = array();
+$result["episodes_"]["seasons"] = $pqEpisodes->find(".seasons-and-year-nav div")->eq(2)->html();
+$result["episodes_"]["years"] = $pqEpisodes->find(".seasons-and-year-nav div")->eq(3)->html();
+
+//$result["episodes_"] = trim($pqEpisodes->html());
 
 $result["awards_"] = trim(pq("div.article#titleAwardsRanks")->html());
 $result["cast_"] = trim(pq("div.article#titleCast")->html());
@@ -86,6 +91,8 @@ $result["didyouknow_"] = trim(pq("div.article#titleDidYouKnow")->html());
 				<div><?php echo $result["directors_"]; ?></div>
 				<div><?php echo $result["creators_"]; ?></div>
 				
+				<?php if ($result["episodes_"]["seasons"]) echo '<h4 class="inline">Seasons</h4>' . $result["episodes_"]["seasons"] . '';	?>
+				<?php if ($result["episodes_"]["years"]) echo '<h4>Years</h4>' . $result["episodes_"]["years"] . '';	?>
 				
 			</div>
 		</div>
@@ -119,7 +126,6 @@ $result["didyouknow_"] = trim(pq("div.article#titleDidYouKnow")->html());
 </section>
 
 
-<?php if ($result["episodes_"]) echo '<section class="episodes"><div class="container">' . $result["episodes_"] . '</div></section>';	?>
 <?php if ($result["awards_"]) echo '<section class="awards">' . $result["awards_"] . '</section>';	?>
 
 <section class="cast"><?php echo $result["cast_"]; ?></section>

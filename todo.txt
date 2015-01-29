@@ -1,6 +1,5 @@
 
 
-- title: episodes improve
 - find: improve
 - movies-coming-soon: add header, month drop down, etc..
 
