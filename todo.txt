@@ -2,8 +2,8 @@
 
 ### release
 
-+ bookmarklet
 - responsive
++ bookmarklet
 + logo
 + about page
 

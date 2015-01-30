@@ -63,7 +63,12 @@ main a:focus {
   border-bottom: 1px solid #333;
 }
 section {
-  padding: 2em 0;
+  padding: 1em 0;
+}
+@media (min-width: 768px) {
+  section {
+    padding: 2em 0;
+  }
 }
 hr {
   opacity: 0;
@@ -158,6 +163,7 @@ img {
 }
 .overview .poster {
   max-width: 80%;
+  margin-bottom: 1em;
 }
 .overview .tvHeader a {
   font-weight: bold;
@@ -196,10 +202,15 @@ img {
 .result {
   display: inline-block;
   text-align: left;
-  width: 11em;
+  width: 8.5em;
   vertical-align: top;
   border-width: 0 !important;
-  margin: 1em 0.5em;
+  margin: 1em 0.2em;
+}
+@media (min-width: 768px) {
+  .result {
+    width: 10em;
+  }
 }
 .result .details {
   opacity: 0.3;
@@ -279,7 +290,13 @@ body.title .cast .cast_list .primary_photo {
   display: none;
 }
 body.title .cast .cast_list td {
-  padding: 0.5em 1em;
+  padding: 0.25em 0.5em;
+  vertical-align: top;
+}
+@media (min-width: 768px) {
+  body.title .cast .cast_list td {
+    padding: 0.5em 1em;
+  }
 }
 body.title .cast .cast_list td[itemprop=actor] {
   width: 50%;
