@@ -36,7 +36,9 @@ $pqMain->find("> div.article > div.see-more")->removeClass("see-more");
 //$pqMain->find("*")->attr("style", "");
 $pqMain->find("> div.article")->wrap("<section></section>");
 $pqMain->find("> section")->after("<hr class='seperator'></hr>");
-$result["main_"] = cleanLinks($pqMain->html());
+$data = cleanLinks($pqMain->html());
+$data = str_replace("@csm.csm_widget />", "", $data);
+$result["main_"] = $data;
 
 ?>
 
