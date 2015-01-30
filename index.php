@@ -28,6 +28,7 @@
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/social-likes/3.0.3/social-likes.min.js"></script>
 		<script src="/app.js"></script>
 
 
@@ -57,6 +58,11 @@
 	      </form>
 
       </ul>
+		<div class="social-likes hidden-xs">
+			<div class="facebook btn" title="Share link on Facebook"></div>
+			<div class="twitter btn" title="Share link on Twitter"></div>
+			<div class="plusone btn" title="Share link on Google+"></div>
+		</div>
     </div>
   </div>
 </nav>

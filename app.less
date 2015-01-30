@@ -123,6 +123,53 @@ img {
 }
 
 
+
+
+@facebook: #3b5998;
+@twitter: #55acee;
+@googleplus: #dd4b39;
+
+
+@animation-duration: 300ms;
+
+.social-likes {
+	text-align: center;
+	float: right;
+	padding-top: 15px;
+
+	.social-likes__widget {
+		padding: 0 0.5em;
+		opacity: 0.8;
+		box-shadow: none;
+		transition: opacity @animation-duration;
+		
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.social-likes__icon {
+		font-family: FontAwesome;
+		margin-right: 0.25em;
+	}
+	.social-likes__icon_facebook:before { content: "\f09a"; color:@facebook; }
+	.social-likes__icon_twitter:before { content: "\f099"; color:@twitter; }
+	.social-likes__icon_plusone:before { content: "\f0d5"; color:@googleplus; }
+
+	.social-likes__counter {
+		font-size: 80%;
+		color: #aaa;
+	}
+
+
+}
+
+
+
+
+
+
+
+
 .container {
 	max-width: 750px;
 }

@@ -12,10 +12,3 @@
 	<a href="/movies-coming-soon/">Coming Soon</a>
 </div>
 
-<!--
-<?php
-
-include("movies-in-theaters.php");
-
-?>
--->

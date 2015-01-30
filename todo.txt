@@ -2,10 +2,10 @@
 
 ### release
 
-+ social buttons
 + bookmarklet
 - responsive
 + logo
++ about page
 
 
 + title-fullcredits
