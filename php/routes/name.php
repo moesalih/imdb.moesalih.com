@@ -7,11 +7,11 @@ $result["name"] = pq("h1 span[itemprop='name']")->text();
 
 $result["job"] = pqArrayToPhpArray(pq("div#name-job-categories a span"));
 
-$result["description_"] = trim(pq("div[itemprop='description']")->html());
+$result["description_"] = cleanLinks(pq("div[itemprop='description']")->html());
 
 
 $pqAwards = pq("div.article.highlighted")->eq(0);
-$result["awards_"] = trim($pqAwards->remove()->html());
+$result["awards_"] = cleanLinks($pqAwards->remove()->html());
 
 
 $pqKnownFor = pq("div.article #knownfor");
@@ -20,7 +20,7 @@ foreach($pqKnownFor->children() as $item) {
 	$knownFor[] = parseResult(array(
 		"image" => proxyImages(pq($item)->find("img")->attr("src")),
 		"name" => trim(pq($item)->text()),
-		"link" => pq($item)->find("a")->attr("href"),
+		"link" => cleanLinks(pq($item)->find("a")->attr("href")),
 	));
 }
 $pqKnownFor->parent()->remove();
@@ -36,7 +36,7 @@ $pqMain->find("> div.article > div.see-more")->removeClass("see-more");
 //$pqMain->find("*")->attr("style", "");
 $pqMain->find("> div.article")->wrap("<section></section>");
 $pqMain->find("> section")->after("<hr class='seperator'></hr>");
-$result["main_"] = trim($pqMain->html());
+$result["main_"] = cleanLinks($pqMain->html());
 
 ?>
 

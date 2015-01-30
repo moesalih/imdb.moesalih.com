@@ -22,16 +22,16 @@ $result["metascore"] = intval($result["metascore"][0]);
 
 $pqDirector = pq("div[itemprop='director']");
 cleanH4($pqDirector);
-$result["directors_"] = trim($pqDirector->html());
+$result["directors_"] = cleanLinks($pqDirector->html());
 //$result["directors_"] = str_replace(", ", "<br />", $result["directors_"]);
 
 $pqCreator = pq("div[itemprop='creator']");
 cleanH4($pqCreator);
-$result["creators_"] = trim($pqCreator->html());
+$result["creators_"] = cleanLinks($pqCreator->html());
 //$result["creators_"] = str_replace(", ", "<br />", $result["creators_"]);
 
-$result["actors_"] = trim(pq("div[itemprop='actors']")->html());
-$result["description_"] = trim(pq("p[itemprop='description']")->html());
+$result["actors_"] = cleanLinks(pq("div[itemprop='actors']")->html());
+$result["description_"] = cleanLinks(pq("p[itemprop='description']")->html());
 
 
 
@@ -41,20 +41,20 @@ $pqEpisodes = pq("div.article #title-episode-widget")->parent();
 $pqEpisodes->find("hr")->remove();
 
 $result["episodes_"] = array();
-$result["episodes_"]["seasons"] = $pqEpisodes->find(".seasons-and-year-nav div")->eq(2)->html();
-$result["episodes_"]["years"] = $pqEpisodes->find(".seasons-and-year-nav div")->eq(3)->html();
+$result["episodes_"]["seasons"] = cleanLinks($pqEpisodes->find(".seasons-and-year-nav div")->eq(2)->html());
+$result["episodes_"]["years"] = cleanLinks($pqEpisodes->find(".seasons-and-year-nav div")->eq(3)->html());
 
 //$result["episodes_"] = trim($pqEpisodes->html());
 
-$result["awards_"] = trim(pq("div.article#titleAwardsRanks")->html());
-$result["cast_"] = trim(pq("div.article#titleCast")->html());
+$result["awards_"] = cleanLinks(pq("div.article#titleAwardsRanks")->html());
+$result["cast_"] = cleanLinks(pq("div.article#titleCast")->html());
 
 $pqStoryline = pq("div.article#titleStoryLine");
 $pqStoryline->find("> div.see-more")->removeClass("see-more");
-$result["storyline_"] = trim($pqStoryline->html());
+$result["storyline_"] = cleanLinks($pqStoryline->html());
 
-$result["details_"] = trim(pq("div.article#titleDetails")->html());
-$result["didyouknow_"] = trim(pq("div.article#titleDidYouKnow")->html());
+$result["details_"] = cleanLinks(pq("div.article#titleDetails")->html());
+$result["didyouknow_"] = cleanLinks(pq("div.article#titleDidYouKnow")->html());
 
 
 ?>

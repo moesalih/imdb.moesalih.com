@@ -11,7 +11,7 @@ foreach($pqLists as $list) {
 		$movies[] = parseResult(array(
 			"image" => proxyImages(pq($movie)->find("img")->attr("src")),
 			"name" => trim(pq($movie)->find("h4[itemprop='name'] a")->text()),
-			"link" => pq($movie)->find("a")->attr("href"),
+			"link" => cleanLinks(pq($movie)->find("a")->attr("href")),
 			"rating" => trim(pq($movie)->find("[itemprop='ratingValue']")->attr("content")),
 		));
 	}

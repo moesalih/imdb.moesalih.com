@@ -1,11 +1,7 @@
 
 
-
-
-
 ### release
 
-- clean links to remove ?ref_
 + social buttons
 + bookmarklet
 - responsive
@@ -16,9 +12,6 @@
 
 
 
-
-
-
 ### future
 
 - find: improve
@@ -26,9 +19,11 @@
 
 - convert duration to 1h35min format
 - better search field
+- title-episodes: poster aspect ratio
 
 
 + title: trailer
 + name-bio
++ title-trivia
 
 

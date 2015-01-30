@@ -2,7 +2,7 @@
 
 $pqList = pq("div.article.listo");
 
-$result["data_"] = $pqList->html();
+$result["data_"] = cleanLinks($pqList->html());
 
 ?>
 

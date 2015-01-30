@@ -42,6 +42,13 @@ function pqArrayToPhpArray($pq) {
 	return $array;
 }
 
+function cleanH4($pq) {
+	foreach($pq->find("h4") as $item) {
+		pq($item)->text(trim(pq($item)->text(), ":"));
+	}
+	
+}
+
 function proxyImages($input) {
 	$input = preg_replace("/V1_S.*_AL_/", "V1_SX512_AL_", $input);
 	$input = str_replace("http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/32x44/film-3119741174._CB379391527_.png", PLACEHOLDER_IMAGE, $input);
@@ -50,13 +57,12 @@ function proxyImages($input) {
 	return preg_replace("/(http:\/\/ia.media-imdb.com\/images\/.*\.(jpg|png))/", $proxy, $input);
 }
 
-
-function cleanH4($pq) {
-	foreach($pq->find("h4") as $item) {
-		pq($item)->text(trim(pq($item)->text(), ":"));
-	}
-	
+function cleanLinks($input) {
+	$input = htmlspecialchars_decode($input);
+	$input = preg_replace("/[\?&]ref_=[a-zA-Z0-9_]+/", "", $input);
+	return $input;
 }
+
 
 
 function parseResult($item) {
