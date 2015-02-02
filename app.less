@@ -63,8 +63,8 @@ input {
 
 main {
 	font-size: 16px;
-	@media (min-width: 768px) { font-size: 20px; }
-	@media (min-width: 1000px) { font-size: 22px; }
+	@media (min-width: 768px) { font-size: 18px; }
+	@media (min-width: 1000px) { font-size: 20px; }
 
 	a {
 		color: inherit;
@@ -311,6 +311,31 @@ img {
 	}
 }
 
+	
+.cast_list {
+	margin: 0 auto;
+	
+	
+	.castlist_label, .primary_photo {
+		display: none;
+	}
+
+	td {
+		padding: 0.25em 0.5em;
+		vertical-align: top;
+		@media (min-width: 768px) { padding: 0.5em 1em; }
+	}
+	td[itemprop=actor] {
+		width: 50%;
+		text-align: right;
+		font-weight: bold;
+	}
+	td.character {
+		width: 50%;
+	}
+				
+}
+	
 
 
 
@@ -396,31 +421,6 @@ body.title {
 	}
 
 	.cast {
-	
-		.cast_list {
-			margin: 0 auto;
-			
-			
-			.castlist_label, .primary_photo {
-				display: none;
-			}
-		
-			td {
-				padding: 0.25em 0.5em;
-				vertical-align: top;
-				@media (min-width: 768px) { padding: 0.5em 1em; }
-			}
-			td[itemprop=actor] {
-				width: 50%;
-				text-align: right;
-				font-weight: 700;
-			}
-			td.character {
-				width: 50%;
-			}
-						
-		}
-		
 		.see-more {
 			margin-top: 2em;
 			text-align: center;
@@ -472,6 +472,38 @@ body.title-episodes {
 	}
 	.item_description {
 		font-size: 0.8em;
+	}
+}
+
+body.title-fullcredits {
+
+	.dataHeaderWithBorder {
+		margin-top: 2.5em;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	
+	.cast_list, .simpleCreditsTable {
+		width: 100%;
+		font-size: 0.8em;
+		
+		td {
+			padding: 0.2em 0.4em;
+			vertical-align: top;
+		}
+		.name {
+			width: 50%;
+			text-align: right;
+			font-weight: bold;
+			
+			&:first-child:last-child {
+				text-align: center;
+			}
+		}
+	}
+	
+	.full_cast.form-box {
+		display: none;
 	}
 }
 

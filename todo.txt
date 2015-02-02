@@ -7,10 +7,6 @@
 + logo
 
 
-+ title-fullcredits
-
-
-
 
 ### future
 
