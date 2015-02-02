@@ -5,9 +5,11 @@
 }
 body {
   font-family: "Lato";
-  line-height: 1.6;
   padding-bottom: 3em;
   background-color: #fdfdfd;
+}
+p {
+  margin-bottom: 1em;
 }
 h1 {
   margin-top: 0;

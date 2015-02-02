@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title><?php echo pq("head title")->text(); ?></title>
+		<title><?php echo $title; ?></title>
 
 		<link rel="shortcut icon" type="image/png" href="/images/icon.png" />
 		<link rel="apple-touch-icon" href="/images/icon.png"/>
@@ -56,7 +56,7 @@
 					<input class="form-control" name="q" type="text" size="20" placeholder="Search" value="<?php echo $route == "/find" ? $_GET["q"] : ""; ?>" autocomplete="off" />
 	        </div>
 	      </form>
-
+	      <?php if ($route == "/") { ?><li class=""><a href="/about">What is this?</a></li><?php } ?>
       </ul>
 		<div class="social-likes hidden-xs">
 			<div class="facebook btn" title="Share link on Facebook"></div>

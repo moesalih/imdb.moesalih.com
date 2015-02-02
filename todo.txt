@@ -5,10 +5,10 @@
 - responsive
 + bookmarklet
 + logo
-+ about page
 
 
 + title-fullcredits
+
 
 
 

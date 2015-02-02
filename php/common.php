@@ -107,7 +107,7 @@ $response = curl("http://www.imdb.com" . $path);
 //$html = file_get_contents('http://www.imdb.com/title/tt0816692/');
 $doc = phpQuery::newDocument($response);
 $result = array();
-
+$title = pq("head title")->text();
 
 
 

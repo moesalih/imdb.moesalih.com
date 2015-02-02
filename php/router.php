@@ -1,6 +1,5 @@
 <?php
 
-
 if ($route == "/") {
 	$routeSlug = "index";
 }
@@ -28,11 +27,12 @@ else if (preg_match("/^\/name\/nm\d+\/$/", $route)) {
 else if (preg_match("/^\/name\/nm\d+\/awards$/", $route)) {
 	$routeSlug = "-awards";
 }
+else if ($route == "/about") {
+	$routeSlug = "about";
+	$title = "About this concept - IMDb";
+}
 else {
 	$routeSlug = "default";
 }
-
-
-
 
 ?>
