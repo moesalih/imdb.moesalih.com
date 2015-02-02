@@ -2,7 +2,6 @@
 
 ### release
 
-- responsive
 + bookmarklet
 + logo
 

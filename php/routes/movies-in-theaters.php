@@ -32,7 +32,7 @@ $result["lists"] = array_reverse($lists);
 
 	<?php foreach ($result["lists"] as $list) { ?>
 		<section class="text-center">
-			<h2 class="seperator"><span><?php echo $list["name"]; ?></span></h2>
+			<div class="seperator"><span><?php echo $list["name"]; ?></span></div>
 			<?php displayResults($list["movies"]); ?>
 		</section>
 	<?php } ?>

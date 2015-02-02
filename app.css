@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Lato";
-  padding-bottom: 3em;
+  padding-bottom: 5em;
   background-color: #fdfdfd;
 }
 p {
@@ -23,7 +23,7 @@ h2 {
 }
 h3 {
   font-size: 1.25em;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 h4 {
@@ -49,6 +49,11 @@ main {
 @media (min-width: 1000px) {
   main {
     font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  main {
+    font-size: 22px;
   }
 }
 main a {
@@ -80,13 +85,12 @@ hr.seperator {
   width: 300px;
   border-color: #ddd;
 }
-h2.seperator,
-h3.seperator {
+div.seperator {
   position: relative;
   margin-bottom: 1em;
+  font-weight: bold;
 }
-h2.seperator:before,
-h3.seperator:before {
+div.seperator:before {
   content: "";
   display: block;
   position: absolute;
@@ -95,14 +99,23 @@ h3.seperator:before {
   width: 100%;
   left: 0;
 }
-h2.seperator span,
-h3.seperator span {
+div.seperator span {
   position: relative;
   background: #fdfdfd;
   padding: 0 0.5em;
 }
 img {
   box-shadow: #ccc 0 0 0px 1px;
+}
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar [name='q'] {
+  width: 300px;
+}
+.navbar-brand {
+  font-weight: 900;
 }
 .social-likes {
   text-align: center;
@@ -153,16 +166,6 @@ img {
 .poster img {
   width: 100%;
 }
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent;
-}
-.navbar [name='q'] {
-  width: 300px;
-}
-.navbar-brand {
-  font-weight: 900;
-}
 .overview .poster {
   max-width: 80%;
   margin-bottom: 1em;
@@ -179,13 +182,8 @@ img {
   margin-bottom: 2em;
   text-align: left;
 }
-/*
-.image {
-	text-align: center;
-}
-*/
 .details {
-  font-size: 0.8em;
+  font-size: 0.9em;
   opacity: 0.4;
 }
 .details span {
@@ -257,11 +255,12 @@ img {
 .cast_list td.character {
   width: 50%;
 }
+/********** individual pages **********/
 body.index .navbar input[name="q"] {
   display: none;
 }
 body.index .main-search {
-  margin-top: 5em;
+  margin-top: 7em;
 }
 body.index .main-search input {
   max-width: 500px;
@@ -324,21 +323,32 @@ body.title-episodes .seasonAndYearNav {
 }
 body.title-episodes .season-year-separator {
   display: inline-block;
-  padding: 0 2em;
+  padding: 0 1em;
   opacity: 0.3;
   font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
+@media (min-width: 768px) {
+  body.title-episodes .season-year-separator {
+    padding: 0 2em;
+  }
+}
 body.title-episodes button.sort_direction {
   display: none;
 }
 body.title-episodes .image {
+  display: none;
   float: left;
   margin-right: 1em;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  body.title-episodes .image {
+    display: inline;
+  }
 }
 body.title-episodes .airdate {
   float: right;
@@ -481,6 +491,8 @@ section.awards {
   text-align: center;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 section.awards .see-more {
   display: block;

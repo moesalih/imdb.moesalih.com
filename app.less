@@ -1,6 +1,12 @@
 
 @bg: #fdfdfd;
+
 @imdb: #f5de50;
+@facebook: #3b5998;
+@twitter: #55acee;
+@googleplus: #dd4b39;
+
+@animation-duration: 300ms;
 
 
 
@@ -17,13 +23,9 @@
 
 
 
-
-
-
-
 body {
 	font-family: "Lato";
-	padding-bottom: 3em;
+	padding-bottom: 5em;
 	background-color: #fdfdfd;
 	
 }
@@ -46,7 +48,7 @@ h2 {
 }
 h3 {
 	font-size: 1.25em;
-	margin-top: 2em;
+	margin-top: 1em;
 	margin-bottom: 1em;
 }
 h4 {
@@ -65,6 +67,7 @@ main {
 	font-size: 16px;
 	@media (min-width: 768px) { font-size: 18px; }
 	@media (min-width: 1000px) { font-size: 20px; }
+	@media (min-width: 1400px) { font-size: 22px; }
 
 	a {
 		color: inherit;
@@ -97,9 +100,10 @@ hr {
 	}
 }
 
-h2.seperator, h3.seperator {
+div.seperator {
 	position: relative;
 	margin-bottom: 1em;
+	font-weight: bold;
 	
 	&:before {
 		content: "";
@@ -127,12 +131,18 @@ img {
 
 
 
-@facebook: #3b5998;
-@twitter: #55acee;
-@googleplus: #dd4b39;
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+.navbar [name='q'] {
+	width: 300px;
+}
+.navbar-brand {
+	font-weight: 900;
+}
 
 
-@animation-duration: 300ms;
 
 .social-likes {
 	text-align: center;
@@ -168,10 +178,6 @@ img {
 
 
 
-
-
-
-
 .container {
 	max-width: 750px;
 }
@@ -192,19 +198,6 @@ img {
 }
 
 
-
-
-
-.navbar-default {
-	background-color: transparent;
-	border-color: transparent;
-}
-.navbar [name='q'] {
-	width: 300px;
-}
-.navbar-brand {
-	font-weight: 900;
-}
 
 
 
@@ -234,14 +227,9 @@ img {
 	}
 }
 
-/*
-.image {
-	text-align: center;
-}
-*/
 
 .details {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	opacity: 0.4;
 
 	span {
@@ -261,7 +249,6 @@ img {
 			//background: @imdb;
 		}
 	}
-
 }
 
 
@@ -286,8 +273,6 @@ img {
 		opacity: 0.3;
 	}
 }
-
-
 
 
 
@@ -344,24 +329,22 @@ img {
 
 
 
+/********** individual pages **********/
 
 
 
 body.index {
-
 	.navbar input[name="q"] {
 		display: none;
 	}
 	.main-search {
-		margin-top: 5em;
+		margin-top: 7em;
 		
 		input {
 			max-width: 500px;
 			margin: 0 auto;
 		}
 	}
-	
-	
 }
 
 
@@ -446,10 +429,13 @@ body.title-episodes {
 	.season-year-separator {
 		display: inline-block;
 		//float: left;
-		padding: 0 2em;
+		padding: 0 1em;
 		opacity: 0.3;
 		font-size: 0.8em;
 		.uppercase();
+		
+		@media (min-width: 768px) { padding: 0 2em; }
+
 	}
 	
 	button.sort_direction {
@@ -458,6 +444,9 @@ body.title-episodes {
 	
 	
 	.image {
+		display: none;
+		@media (min-width: 768px) { display: inline; }
+
 		float: left;
 		margin-right: 1em;
 		margin-top: 0.2em;
@@ -605,11 +594,7 @@ body.name {
 	
 	}
 	
-	
 }
-
-
-
 
 
 
@@ -651,14 +636,13 @@ body.name {
 
 
 
-
-
-
 section.awards {
 	background-color: #f6f6f6;
 	text-align: center;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
+	padding-left: 15px;
+	padding-right: 15px;
 	
 	.see-more {
 		display: block;
