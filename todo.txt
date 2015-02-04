@@ -2,7 +2,6 @@
 
 ### release
 
-+ bookmarklet
 + logo
 
 
