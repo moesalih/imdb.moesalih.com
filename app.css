@@ -387,6 +387,28 @@ body.title-fullcredits .simpleCreditsTable .name:first-child:last-child {
 body.title-fullcredits .full_cast.form-box {
   display: none;
 }
+body.title-trivia .did-you-know-actions {
+  display: none;
+}
+body.title-trivia .header .nav,
+body.title-trivia .header .jumpto {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.7em;
+  opacity: 0.4;
+  margin-bottom: 1em;
+}
+body.title-trivia .list .li_group {
+  margin-top: 3em;
+}
+body.title-trivia .list .message_box {
+  opacity: 0.4;
+}
+body.title-trivia .list .soda {
+  padding: 1.5em 0;
+  border-bottom: 1px solid #eee;
+}
 body.-awards div.header {
   font-size: 0.8em;
   opacity: 0.5;

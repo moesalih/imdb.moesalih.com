@@ -12,12 +12,10 @@
 - movies-coming-soon: add header, month drop down, etc..
 
 - convert duration to 1h35min format
-- better search field
 - title-episodes: poster aspect ratio
 
 
 + title: trailer
 + name-bio
-+ title-trivia
 
 

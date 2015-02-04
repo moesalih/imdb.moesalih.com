@@ -21,6 +21,9 @@ else if (preg_match("/^\/title\/tt\d+\/episodes$/", $route)) {
 else if (preg_match("/^\/title\/tt\d+\/fullcredits$/", $route)) {
 	$routeSlug = "title-fullcredits";
 }
+else if (preg_match("/^\/title\/tt\d+\/trivia$/", $route)) {
+	$routeSlug = "title-trivia";
+}
 else if (preg_match("/^\/title\/tt\d+\/awards$/", $route)) {
 	$routeSlug = "-awards";
 }
