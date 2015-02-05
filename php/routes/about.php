@@ -15,7 +15,7 @@
 	
 	<div class="small">
 		Drag the following bookmarklet to your bookmarks toolbar to be able to quickly move from IMDb to the same page here.<br /><br />
-		<div class="text-center"><a class="btn btn-default" href="javascript:void((function(){if(document.location.hostname.indexOf('imdb.com')!==-1){document.location.href=document.URL.replace('www.imdb.com','imdb.moesalih.com');}else{document.location.href='http://imdb.moesalih.com/'}})());">IMDb</a></div>
+		<div class="text-center"><a class="btn btn-default" href="javascript:void((function(){if(document.location.hostname.indexOf('www.imdb.com')!==-1){document.location.href=document.URL.replace('www.imdb.com','imdb.moesalih.com');}else{document.location.href='http://imdb.moesalih.com/'}})());">IMDb</a></div>
 	</div>
 </div>
 

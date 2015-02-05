@@ -35,7 +35,8 @@ $result["description_"] = cleanLinks(pq("p[itemprop='description']")->html());
 
 
 
-$result["trailer"] = "";
+$result["trailer"] = cleanLinks(pq("a[itemprop='trailer']")->attr("href"));
+
 
 $pqEpisodes = pq("div.article #title-episode-widget")->parent();
 $pqEpisodes->find("hr")->remove();
@@ -94,6 +95,17 @@ $result["didyouknow_"] = cleanLinks(pq("div.article#titleDidYouKnow")->html());
 				<?php if ($result["episodes_"]["seasons"]) echo '<h4 class="inline">Seasons</h4>' . $result["episodes_"]["seasons"] . '';	?>
 				<?php if ($result["episodes_"]["years"]) echo '<h4>Years</h4>' . $result["episodes_"]["years"] . '';	?>
 				
+				<?php if ($result["trailer"]) { ?>
+					<br /><br />
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target=".trailer-modal">Watch Trailer</button>
+					<div class="modal fade trailer-modal" tabindex="-1" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<iframe src="http://www.imdb.com<?php echo $result["trailer"]; ?>imdb/embed?autoplay=false&width=640" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="no" scrolling="no"></iframe>
+							</div>
+						</div>
+					</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

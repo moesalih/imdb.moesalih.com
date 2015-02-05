@@ -307,6 +307,12 @@ body.title .episodes .seasons-and-year-nav div {
   width: 49%;
   vertical-align: top;
 }
+body.title .trailer-modal .modal-dialog {
+  width: 672px;
+}
+body.title .trailer-modal .modal-dialog iframe {
+  margin: 15px;
+}
 body.title .cast .see-more {
   margin-top: 2em;
   text-align: center;
