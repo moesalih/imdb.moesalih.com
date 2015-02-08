@@ -33,6 +33,9 @@ else if (preg_match("/^\/name\/nm\d+\/$/", $route)) {
 else if (preg_match("/^\/name\/nm\d+\/awards$/", $route)) {
 	$routeSlug = "-awards";
 }
+else if (preg_match("/^\/event\/ev\d+\//", $route)) {
+	$routeSlug = "event";
+}
 else if ($route == "/about") {
 	$routeSlug = "about";
 	$title = "About this concept - IMDb";

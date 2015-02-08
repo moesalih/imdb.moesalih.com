@@ -488,6 +488,31 @@ body.name #filmography .year_column {
   text-align: right;
   padding: 0.2em 0;
 }
+body.event .award h1 {
+  margin: 1em auto 0;
+  font-size: 2em;
+}
+body.event .award h2 {
+  margin: 2em auto 1em;
+  text-align: left;
+}
+body.event .award h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  opacity: 0.3;
+  font-size: 0.8em;
+  margin-top: 1.5em;
+}
+body.event .award img {
+  display: none;
+}
+body.event .award hr {
+  margin: 0.5em auto;
+}
+body.event form {
+  display: none;
+}
 /********** IMDB overrides **********/
 .inline {
   display: inline;
