@@ -7,11 +7,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
+		
+		<meta name="apple-mobile-web-app-title" content="IMDb">
 
 		<title><?php echo $title; ?></title>
 
-		<link rel="shortcut icon" type="image/png" href="/images/icon.png" />
-		<link rel="apple-touch-icon" href="/images/icon.png"/>
+		<link rel="shortcut icon" type="image/png" href="/icon.png" />
+		<link rel="apple-touch-icon" href="/icon-large.png"/>
 
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 
