@@ -23,12 +23,10 @@ $result["metascore"] = intval($result["metascore"][0]);
 $pqDirector = pq("div[itemprop='director']");
 cleanH4($pqDirector);
 $result["directors_"] = cleanLinks($pqDirector->html());
-//$result["directors_"] = str_replace(", ", "<br />", $result["directors_"]);
 
 $pqCreator = pq("div[itemprop='creator']");
 cleanH4($pqCreator);
 $result["creators_"] = cleanLinks($pqCreator->html());
-//$result["creators_"] = str_replace(", ", "<br />", $result["creators_"]);
 
 $result["actors_"] = cleanLinks(pq("div[itemprop='actors']")->html());
 $result["description_"] = cleanLinks(pq("p[itemprop='description']")->html());
@@ -68,10 +66,6 @@ $result["didyouknow_"] = cleanLinks(pq("div.article#titleDidYouKnow")->html());
 		<div class="row">
 			<div class="col-sm-4 text-center">
 				<div class="poster"><img src="<?php echo $result["image"]; ?>" /></div>
-		<!--
-				<button class="button" {{action 'play'}}>Play</button>
-				<a {{bind-attr href=YoutubeTrailerUrl}} target="youtube" class="button">Trailer</a>
-		-->
 			</div>
 			<div class="col-sm-8">
 				<?php if ($result["tvHeader"]) { ?><span class="tvHeader"><?php echo $result["tvHeader"]; ?></span><?php } ?>
@@ -109,31 +103,6 @@ $result["didyouknow_"] = cleanLinks(pq("div.article#titleDidYouKnow")->html());
 			</div>
 		</div>
 	</div>
-
-
-
-
-<!--
-	<div class="image"><img src="<?php echo $result["image"]; ?>" /></div>
-	<h1 class="text-center"><?php echo $result["name"]; ?></h1>
-
-	<div class="details text-center">
-		<span><?php echo $result["year"]; ?></span>
-		<span><?php echo implode(", ", $result["genres"]); ?></span>
-		<span><?php echo $result["contentRating"]; ?></span>
-		<span><?php echo $result["duration"]; ?></span>
-	</div>
-
-	<div class="details text-center">
-		<span class="rating"><i class="fa fa-star"></i> <?php echo $result["ratingValue"]; ?></span>
-		<span class="rating">META: </i> <?php echo $result["metascore"]; ?></span>
-	</div>
-
-	
-	<div class="description"><?php echo $result["description"]; ?></div>
-	<div><?php echo $result["directors_"]; ?></div>
-	<div><?php echo $result["creators_"]; ?></div>
--->
 
 </section>
 
