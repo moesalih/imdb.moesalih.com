@@ -111,11 +111,23 @@ img {
   background-color: transparent;
   border-color: transparent;
 }
+.navbar-default .navbar-brand {
+  font-weight: 900;
+  background-color: #f5de50;
+  color: #333;
+  opacity: 0.9;
+  -webkit-transition: opacity 300ms;
+          transition: opacity 300ms;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active {
+  background-color: #f5de50;
+  color: #333;
+  opacity: 1;
+}
 .navbar [name='q'] {
   width: 300px;
-}
-.navbar-brand {
-  font-weight: 900;
 }
 .social-likes {
   text-align: center;
@@ -184,9 +196,9 @@ img {
 }
 .details {
   font-size: 0.9em;
-  opacity: 0.4;
 }
 .details span {
+  opacity: 0.4;
   margin-right: 1em;
 }
 .details span.label {
@@ -195,6 +207,11 @@ img {
 .details span.year,
 .details span.rating {
   font-weight: bold;
+}
+.details span.rating.label {
+  background: #f5de50;
+  color: #333;
+  opacity: 1;
 }
 .knownfor {
   text-align: center;
@@ -211,9 +228,6 @@ img {
   .result {
     width: 10em;
   }
-}
-.result .details {
-  opacity: 0.3;
 }
 .subpage_title_block {
   margin-bottom: 3em;

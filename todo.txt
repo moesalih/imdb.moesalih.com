@@ -2,7 +2,7 @@
 
 ### release
 
-+ logo
++ favicon
 
 
 
@@ -16,5 +16,4 @@
 
 
 + name-bio
-+ event
 

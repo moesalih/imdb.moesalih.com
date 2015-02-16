@@ -19,10 +19,6 @@
 
 
 
-
-
-
-
 body {
 	font-family: "Lato";
 	padding-bottom: 5em;
@@ -134,12 +130,23 @@ img {
 .navbar-default {
 	background-color: transparent;
 	border-color: transparent;
+	
+	.navbar-brand {
+		font-weight: 900;
+		background-color: @imdb;
+		color: #333;
+		opacity: 0.9;
+		transition: opacity @animation-duration;
+		
+		&:hover, &:focus, &:active {
+			background-color: @imdb;
+			color: #333;
+			opacity: 1;
+		}
+	}
 }
 .navbar [name='q'] {
 	width: 300px;
-}
-.navbar-brand {
-	font-weight: 900;
 }
 
 
@@ -230,10 +237,10 @@ img {
 
 .details {
 	font-size: 0.9em;
-	opacity: 0.4;
 
 	span {
 		//.uppercase();
+		opacity: 0.4;
 		margin-right: 1em;
 		
 		&.label {
@@ -246,7 +253,9 @@ img {
 		}
 	
 		&.rating.label {
-			//background: @imdb;
+			background: @imdb;
+			color: #333;
+			opacity: 1;
 		}
 	}
 }
@@ -270,7 +279,7 @@ img {
 	@media (min-width: 768px) { width: 10em; }
 
 	.details {
-		opacity: 0.3;
+		//opacity: 0.3;
 	}
 }
 
