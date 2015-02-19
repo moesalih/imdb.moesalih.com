@@ -502,15 +502,15 @@ body.name #filmography .year_column {
   text-align: right;
   padding: 0.2em 0;
 }
-body.event .award h1 {
+body.event main .award h1 {
   margin: 1em auto 0;
   font-size: 2em;
 }
-body.event .award h2 {
+body.event main .award h2 {
   margin: 2em auto 1em;
   text-align: left;
 }
-body.event .award h3 {
+body.event main .award h3 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -518,13 +518,13 @@ body.event .award h3 {
   font-size: 0.8em;
   margin-top: 1.5em;
 }
-body.event .award img {
+body.event main .award img {
   display: none;
 }
-body.event .award hr {
+body.event main .award hr {
   margin: 0.5em auto;
 }
-body.event form {
+body.event main form {
   display: none;
 }
 /********** IMDB overrides **********/
